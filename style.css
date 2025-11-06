@@ -1,111 +1,171 @@
-/* Reset simples */
+/* --- 🎨 Variáveis de Estilo --- */
+:root {
+  --cor-primaria: #ffbb00; /* Verde Escuro/Teal - Sustentabilidade */
+  --cor-secundaria: #ff0000; /* Verde Médio */
+  --cor-fundo: #000000; /* Cinza Claro para o fundo */
+  --cor-texto: #ffbb00; /* Cinza Escuro para o texto */
+  --cor-destaque: #9900ff; /* Azul para links/ênfases */
+  --largura-max: 1100px;
+  --sombra-leve: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* --- 🛠️ Reset Básico e Tipografia --- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+}
+
+/* Centralizador de Conteúdo, comum em sites modernos */
+.container {
+  width: 90%;
+  max-width: var(--largura-max);
+  margin: 0 auto;
+}
+
+/* --- 🖼️ Header Principal (Título e Subtítulo) --- */
+.header-principal {
+  background-color: var(--cor-primaria);
+  color: rgb#9900ff;
+  padding: 60px 0;
+  text-align: center;
+  box-shadow: var(--sombra-leve);
+}
+
+.header-principal h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.header-principal h2 {
+  font-weight: 400;
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+/* --- 📰 Conteúdo Principal --- */
+.conteudo-principal {
+  padding: 40px 0;
+}
+
+.secao-texto {
+  margin-bottom: 40px;
+  padding: 15px 0;
+}
+
+.secao-texto h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--cor-destaque);
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  border-left: 5px solid var(--cor-secundaria);
+  padding-left: 15px;
+}
+
+.secao-texto p {
+  text-align: justify;
+  font-size: 1.05em;
+  margin-bottom: 15px;
+}
+
+/* --- 🖼️ Área da Imagem (Placeholder) --- */
+.imagem-destaque {
+  margin: 30px 0 50px 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--sombra-leve);
+  overflow: hidden;
+  text-align: center;
+}
+
+.imagem-destaque img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+  max-height: 450px; /* Limite de altura razoável para a imagem */
+}
+
+.legenda {
+  padding: 15px;
+  font-style: italic;
+  color: #666;
+  font-size: 0.9em;
+}
+
+/* Separador visual entre as seções */
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+  margin: 40px auto;
+  width: 80%;
+}
+
+/* --- 📺 Estilos para Vídeo (Nova Seção) --- */
+.secao-video h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--cor-destaque);
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  border-left: 5px solid var(--cor-secundaria);
+  padding-left: 15px;
+}
+/* O container do iframe já tem estilos inline no HTML para funcionar corretamente */
+
+
+/* --- 📚 Estilos para Referências (Nova Seção) --- */
+.secao-referencias h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--cor-destaque);
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  border-left: 5px solid var(--cor-secundaria);
+  padding-left: 15px;
+}
+.secao-referencias ul {
+  padding-left: 25px; /* Ajuste para as listas */
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+.secao-referencias li {
+  font-size: 1.0em;
+  color: #444;
+}
+
+
+/* --- 🦶 Rodapé --- */
+.footer-principal {
+  background-color: var(--cor-texto);
+  color: white;
+  padding: 25px 0;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+/* --- 💻 Responsividade Mínima --- */
+@media (max-width: 768px) {
+  .header-principal h1 {
+      font-size: 2em;
   }
-  
-  :root {
-    /* Paleta de cores */
-    --bg-main: #0d0d0d;             /* fundo quase preto */
-    --bg-block: #1f1f1f;            /* bloco de conteúdo escuro */
-    --text-main: #ffffff;           /* texto branco */
-    --accent-title: #e63946;        /* vermelho médio para títulos */
-    --accent-sub: #f4a261;          /* laranja-areia para subtítulos/divisórias */
+  .header-principal h2 {
+      font-size: 1.1em;
   }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: var(--bg-main);
-    color: var(--text-main);
-    text-align: center;             /* centralizado */
-    padding: 40px;                  /* espaçamento maior ao redor do contorno */
+  .secao-texto h3, .secao-video h3, .secao-referencias h3 {
+      font-size: 1.5em;
   }
-  
   .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
+      width: 95%;
   }
-  
-  header {
-    padding: 30px 0;
+  hr {
+      width: 100%;
   }
-  
-  header h1 {
-    font-size: 2.8rem;
-    color: var(--accent-title);
-  }
-  
-  header h2 {
-    font-size: 1.6rem;
-    color: var(--accent-sub);
-  }
-  
-  .imagem-hero {
-    margin: 40px 0;
-  }
-  
-  .imagem-hero img {
-    max-width: 100%;
-    height: auto;
-    border: none;                   /* sem borda */
-    border-radius: 8px;
-  }
-  
-  main {
-    background-color: var(--bg-block); /* bloco de fundo para todo conteúdo dos textos */
-    padding: 30px;
-    margin: 30px auto;
-    width: 90%;
-    text-align: left;               /* parágrafos alinhados à esquerda para melhor leitura */
-    border-radius: 6px;
-  }
-  
-  main h3 {
-    font-size: 1.8rem;
-    color: var(--accent-title);     /* vermelho para títulos */
-    margin-top: 25px;
-    margin-bottom: 15px;
-  }
-  
-  main p {
-    font-size: 1rem;
-    color: var(--text-main);
-    margin-bottom: 25px;
-  }
-  
-  footer {
-    margin-top: 50px;
-    padding-top: 30px;
-    border-top: 3px solid var(--accent-sub); /* linha de separação laranja-areia */
-  }
-  
-  footer h4 {
-    font-size: 1.4rem;
-    color: var(--accent-title);
-    margin-bottom: 15px;
-  }
-  
-  footer ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  
-  footer ul li {
-    font-size: 0.9rem;
-    color: var(--text-main);
-    margin-bottom: 8px;
-  }
-  
-  /* Responsividade simples */
-  @media (max-width: 600px) {
-    header h1 {
-      font-size: 2rem;
-    }
-    main h3 {
-      font-size: 1.4rem;
-    }
-  }
-  
+}
