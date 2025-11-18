@@ -2,8 +2,8 @@
 :root {
   --cor-primaria: #ffbb00; /* Verde Escuro/Teal - Sustentabilidade */
   --cor-secundaria: #ff0000; /* Verde Médio */
-  --cor-fundo: #000000; /* Cinza Claro para o fundo */
-  --cor-texto: #ffbb00; /* Cinza Escuro para o texto */
+  --cor-fundo: #ffffff; /* Cinza Claro para o fundo */
+  --cor-texto: #000000; /* Cinza Escuro para o texto */
   --cor-destaque: #9900ff; /* Azul para links/ênfases */
   --largura-max: 1100px;
   --sombra-leve: 0 4px 12px rgba(0, 0, 0, 0.08);
